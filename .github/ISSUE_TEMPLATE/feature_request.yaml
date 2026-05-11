@@ -1,25 +1,91 @@
-name: Feature request
-description: Suggest an idea for containerd
-labels: kind/feature
+name: Feature Request
+description: Suggest a new feature or enhancement for containerd
+labels: ["kind/feature"]
 body:
-  - type: textarea
+  - type: markdown
     attributes:
-      label: What is the problem you're trying to solve
+      value: |
+        Thank you for taking the time to suggest a new feature!
+        Please fill out the sections below to help us understand your request.
+
+  - type: checkboxes
+    id: existing-issues
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the feature you are requesting.
+      options:
+        - label: I have searched the existing issues and no issue exists
+          required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
       description: |
+        Is your feature request related to a problem? Please describe.
         A clear and concise description of what the problem is.
+      placeholder: "I'm always frustrated when..."
     validations:
       required: true
 
   - type: textarea
+    id: proposed-solution
     attributes:
-      label: Describe the solution you'd like
+      label: Proposed Solution
       description: |
-        A clear and concise description of what you'd like to happen.
+        Describe the solution you'd like.
+        A clear and concise description of what you want to happen.
+      placeholder: "I would like containerd to..."
     validations:
       required: true
 
   - type: textarea
+    id: alternatives
     attributes:
-      label: Additional context
+      label: Alternatives Considered
       description: |
-        Add any other context about the feature request here.
+        Describe any alternative solutions or features you've considered.
+      placeholder: "I also considered..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which component of containerd does this feature relate to?
+      multiple: true
+      options:
+        - Runtime
+        - Snapshotter
+        - Content Store
+        - Image Service
+        - Container Service
+        - Task Service
+        - Namespace Service
+        - Events
+        - Metrics
+        - CRI Plugin
+        - Client Library
+        - CLI (ctr)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context, screenshots, or references about the feature request here.
+        You may also link to related issues, PRs, or upstream discussions.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to contribute this feature?
+      options:
+        - label: I am willing to submit a pull request to implement this feature
