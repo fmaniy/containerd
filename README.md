@@ -85,10 +85,14 @@ ctr containers delete my-container
 sudo systemctl status containerd
 
 # View containerd logs (helpful when troubleshooting)
-sudo journalctl -u containerd -f
+# Tip: use --since "10 min ago" to narrow output when logs are noisy
+sudo journalctl -u containerd -f --since "10 min ago"
 
 # Inspect a container's details
 ctr containers info my-container
+
+# List all snapshots (handy for tracking storage usage during experiments)
+ctr snapshots ls
 ```
 
 ## Architecture
@@ -97,13 +101,5 @@ ctr containers info my-container
 +-------------------------------+
 |         containerd            |
 |  +-------------------------+  |
-|  |       gRPC API          |  |
-|  +-------------------------+  |
-|  |    Content Store        |  |
-|  |    Snapshotter          |  |
-|  |    Image Service        |  |
-|  |    Container Service    |  |
-|  |    Task Service         |  |
-|  +-------------------------+  |
-|  |      Runti
+|  |       gRPC API   
 ```
