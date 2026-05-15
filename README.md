@@ -92,14 +92,8 @@ sudo journalctl -u containerd -f --since "10 min ago"
 ctr containers info my-container
 
 # List all snapshots (handy for tracking storage usage during experiments)
-ctr snapshots ls
-```
+ctr snapshots list
 
-## Architecture
-
-```
-+-------------------------------+
-|         containerd            |
-|  +-------------------------+  |
-|  |       gRPC API   
+# Remove all unused snapshots to free up disk space
+ctr snapshots rm $(ctr snapshots list | awk 'NR>1 {print $1}')
 ```
