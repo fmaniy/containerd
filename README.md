@@ -54,6 +54,9 @@ make build
 # Run tests
 make test
 
+# Run a specific test package (useful during development)
+go test ./snapshots/... -v
+
 # Install binaries
 sudo make install
 ```
@@ -90,8 +93,4 @@ ctr run docker.io/library/ubuntu:22.04 my-container
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
-
-- Submitting bug reports and feature requests (use the [issue templates](.github/ISSUE_TEMPLATE/))
-- Development workflow
-- Code style
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
