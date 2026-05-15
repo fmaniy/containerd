@@ -94,6 +94,6 @@ ctr containers info my-container
 # List all snapshots (handy for tracking storage usage during experiments)
 ctr snapshots list
 
-# Remove all unused snapshots to free up disk space
-ctr snapshots rm $(ctr snapshots list | awk 'NR>1 {print $1}')
+# Remove unused snapshots to free disk space
+ctr snapshots rm <snapshot-name>
 ```
