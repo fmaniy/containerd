@@ -78,6 +78,19 @@ ctr containers list
 ctr containers delete my-container
 ```
 
+### Useful Debugging Commands
+
+```bash
+# Check containerd service status
+sudo systemctl status containerd
+
+# View containerd logs (helpful when troubleshooting)
+sudo journalctl -u containerd -f
+
+# Inspect a container's details
+ctr containers info my-container
+```
+
 ## Architecture
 
 ```
@@ -94,9 +107,3 @@ ctr containers delete my-container
 |  +-------------------------+  |
 |  |      Runti
 ```
-
-## Notes
-
-> **Personal notes while exploring the codebase:**
-> - The snapshotter interface is a good entry point for understanding how storage backends plug in — see `snapshots/snapshots.go`.
-> - The `integration` test suite requires a running containerd daemon; use `make integration` carefully in the dev container.
