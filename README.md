@@ -70,6 +70,12 @@ sudo containerd
 # Use ctr CLI to interact
 ctr images pull docker.io/library/ubuntu:22.04
 ctr run docker.io/library/ubuntu:22.04 my-container
+
+# List running containers
+ctr containers list
+
+# Delete a container
+ctr containers delete my-container
 ```
 
 ## Architecture
@@ -93,4 +99,4 @@ ctr run docker.io/library/ubuntu:22.04 my-container
 
 ## Contributing
 
-This is a personal fork — contributions are not expected. If you'd like to contribute to containerd itself, please visit the [upstream repository](https://github.com/containerd/containerd) and review their [contributing guidelines](https://github.com/containerd/containerd/blob/main/CONTRIBUTING.md).
+This is a personal fork — contributions are not expected. For contributing to the upstream project, see the [contributing guide](https://github.com/containerd/containerd/blob/main/CONTRIBUTING.md).
