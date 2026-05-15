@@ -93,4 +93,4 @@ ctr run docker.io/library/ubuntu:22.04 my-container
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
+This is a personal fork — contributions are not expected. If you'd like to contribute to containerd itself, please visit the [upstream repository](https://github.com/containerd/containerd) and review their [contributing guidelines](https://github.com/containerd/containerd/blob/main/CONTRIBUTING.md).
