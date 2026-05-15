@@ -6,6 +6,8 @@
 
 A fork of [containerd/containerd](https://github.com/containerd/containerd) — an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
 
+> **Personal fork** — used for learning and experimentation. For production use, see the [upstream project](https://github.com/containerd/containerd).
+
 ## Overview
 
 containerd is available as a daemon for Linux and Windows. It manages the complete container lifecycle of its host system, from image transfer and storage to container execution and supervision to low-level storage to network attachments and beyond.
@@ -92,13 +94,4 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 - Submitting bug reports and feature requests (use the [issue templates](.github/ISSUE_TEMPLATE/))
 - Development workflow
-- Code style and standards
-- Testing requirements
-
-## License
-
-This project is licensed under the Apache License 2.0 — see the [LICENSE](LICENSE) file for details.
-
-## Upstream
-
-This is a fork of the upstream [containerd/containerd](https://github.com/containerd/containerd) project. We aim to stay in sync with upstream while adding additional features and fixes relevant to our use case.
+- Code style
