@@ -92,11 +92,11 @@ ctr containers delete my-container
 |  |    Container Service    |  |
 |  |    Task Service         |  |
 |  +-------------------------+  |
-|  |      Runtimes (OCI)     |  |
-|  +-------------------------+  |
-+-------------------------------+
+|  |      Runti
 ```
 
-## Contributing
+## Notes
 
-This is a personal fork — contributions are not expected. For contributing to the upstream project, see the [contributing guide](https://github.com/containerd/containerd/blob/main/CONTRIBUTING.md).
+> **Personal notes while exploring the codebase:**
+> - The snapshotter interface is a good entry point for understanding how storage backends plug in — see `snapshots/snapshots.go`.
+> - The `integration` test suite requires a running containerd daemon; use `make integration` carefully in the dev container.
